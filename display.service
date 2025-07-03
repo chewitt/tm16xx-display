@@ -2,6 +2,7 @@
 Description=TM16xx Display Service
 
 [Service]
+ConditionPathIsDirectory=/sys/class/leds/display
 ExecStart=/usr/sbin/display-service
 ExecStop=/bin/kill -s SIGTERM $MAINPID
 Restart=always
